@@ -1,0 +1,122 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+     background: linear-gradient(135deg, #71b7e6, #9b59b6);
+     font-family: 'Popins', sans-serif;
+ }
+
+ .container {
+     max-width: 700px;
+     width: 100%;
+     background-color: #fff;
+     padding: 25px 30px;
+     border-radius: 5px;
+     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+     /* Perbaikan: diperbaiki dari "05px" menjadi "0 5px" */
+ }
+
+ .container .title {
+     font-size: 25px;
+     font-weight: 500;
+     position: relative;
+     margin-bottom: 20px;
+     /* Tambahkan margin bottom */
+ }
+
+ .container .title::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: -5px;
+     height: 3px;
+     width: 30px;
+     border-radius: 5px;
+     background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+
+ .container form .user-details {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin-bottom: 20px;
+ }
+
+ .container form .input-inbox {
+     margin-bottom: 15px;
+     width: calc(50% - 10px);
+ }
+
+ .container form .input-inbox span.details {
+     display: block;
+     font-weight: 500;
+     margin-bottom: 5px;
+ }
+
+ .container form .input-inbox input {
+     height: 45px;
+     width: 100%;
+     outline: none;
+     font-size: 16px;
+     border-radius: 5px;
+     padding-left: 15px;
+     border: 1px solid #ccc;
+     border-bottom-width: 2px;
+     transition: all 0.3s ease;
+ }
+
+ .container form .input-inbox input:focus,
+ .container form .input-inbox input:valid {
+     border-color: #9b59b6;
+ }
+
+ .container form .button {
+     width: 100%;
+ }
+
+ .container form .button button {
+     height: 45px;
+     width: 100%;
+     border-radius: 5px;
+     border: none;
+     color: #fff;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+
+ .container form .button button:hover {
+     background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+ }
+
+ @media(max-width: 584px) {
+     .container {
+         max-width: 100%;
+     }
+ }
+
+ @media(max-width: 459px) {
+     .container form .input-inbox {
+         width: 100%;
+     }
+ }
+
+ .content form .user-details {
+     max-height: 300px;
+     overflow-y: scroll;
+ }
+
+ .user-details::-webkit-scrollbar {
+     width: 5px;
+ }
